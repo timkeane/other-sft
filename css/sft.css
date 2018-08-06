@@ -19,25 +19,7 @@
   padding-top: 7px;
   padding-bottom: 7px;
 }
-
-.fnd #tabs .btns h2.btn-2 {
-  display: none;
-}
-.fnd #tabs .btns h2.btn-1 {
-  position: fixed;
-  left: -1000px;
-  top: -1000px;
-}
-.btns[role="tablist"] {
-  display: none;
-}
 @media only screen and (max-width : 750px), screen and (max-device-height: 350px) {
-  .btns[role="tablist"] {
-    display: table;
-  }
-  .fnd #tabs .btns h2 {
-    width: 50%;
-  }
   .fnd #tabs .btns h2.btn-2 {
     display: table-cell;
   }
