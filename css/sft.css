@@ -1,0 +1,44 @@
+.fnd #banner{
+  background-color:#274b72;
+}
+.btn-sq, .clps h3:before, .btn-rnd{
+  background-color:rgba(39, 75, 114,.6);
+}
+.btn-sq:hover, .clps h3:hover:before, .btn-rnd:hover{
+  background-color:#274b72;
+}
+.tabs .btns h2.active{
+  background-color:#274b72;
+}
+.tabs .btns h2.active *{
+  background-color:#274b72;
+  color:#fff
+}
+#filters label {
+  line-height: 21px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.fnd #tabs .btns h2.btn-2 {
+  display: none;
+}
+.fnd #tabs .btns h2.btn-1 {
+  position: fixed;
+  left: -1000px;
+  top: -1000px;
+}
+.btns[role="tablist"] {
+  display: none;
+}
+@media only screen and (max-width : 750px), screen and (max-device-height: 350px) {
+  .btns[role="tablist"] {
+    display: table;
+  }
+  .fnd #tabs .btns h2 {
+    width: 50%;
+  }
+  .fnd #tabs .btns h2.btn-2 {
+    display: table-cell;
+  }
+}
