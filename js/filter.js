@@ -27,7 +27,7 @@ nyc.ol.Filters.prototype.getGeo = function() {
 };
 
 nyc.ol.Filters.prototype.select = function(projCol) {
-  return 'select ST_AsText(g.the_geom_webmercator) wkt_geom, s.' + projCol + ', count(' + projCol + ') count';
+  return 'select ST_AsText(g.the_geom_webmercator) wkt_geom, s.' + projCol + ', count(s.' + projCol + ') count';
 };
 
 nyc.ol.Filters.prototype.from = function() {
@@ -63,7 +63,6 @@ nyc.ol.Filters.prototype.sql = function() {
     this.select(projCol) +
     this.from(projCol) +
     this.where(projCol, geoCol) +
-    this.from(projCol) +
     this.group(projCol)
   );
 };
