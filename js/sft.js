@@ -15,7 +15,7 @@ var app = new nyc.ol.FinderApp({
     choices: [
       {name: 'agency_name', values: ['Department of Environmental Protection'], label: 'Department of Environmental Protection'},
       {name: 'agency_name', values: ['Housing Preservation and Development'], label: 'Housing Preservation and Development'},
-      {name: 'agency_name', values: ['New York City Housing Authority'], label: 'New York City Housing Authority'}
+      {name: 'agency_name', values: ['Department of Design and Construction'], label: 'Department of Design and Construction'}
     ]
   }, {
     title: 'Occupancy Type',
