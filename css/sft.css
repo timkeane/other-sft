@@ -4,7 +4,7 @@
 .btn-sq, .clps h3:before, .btn-rnd{
   background-color:rgba(39, 75, 114,.6);
 }
-.btn-sq:hover, .clps h3:hover:before, .btn-rnd:hover{
+.btn-sq:hover, .clps h3:hover:before, .btn-rnd:hover, .fnd #tabs .btns h2.btn-2.filtered:before{
   background-color:#274b72;
 }
 .tabs .btns h2.active{
@@ -18,6 +18,9 @@
   line-height: 21px;
   padding-top: 7px;
   padding-bottom: 7px;
+}
+.pop>.content {
+  width: 200px;
 }
 @media only screen and (max-width : 750px), screen and (max-device-height: 350px) {
   .fnd #tabs .btns h2.btn-2 {

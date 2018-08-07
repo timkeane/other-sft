@@ -16,9 +16,11 @@ var decorations = {
   getName: function() {
     var geo = this.geo();
     var type = this.geoType(geo);
+    var count = this.get('count');
     return $('<div></div>')
       .append(type.append(this.geoName(geo)))
-      .append('<br>' + this.get('count') + ' projects');
+      .append('<br>' + count + ' project')
+      .append(count > 1 ? 's' : '');
   },
   html: function() {
     return this.getName();

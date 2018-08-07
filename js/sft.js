@@ -26,6 +26,7 @@ new nyc.ol.FinderApp({
 });
 
 finderApp.pager.pageSize = 20;
+finderApp.layer.setZIndex(100);
 
 $(document).ready(function() {
   var collapsible = new nyc.Collapsible({
