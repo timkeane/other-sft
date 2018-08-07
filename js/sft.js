@@ -32,9 +32,14 @@ $(document).ready(function() {
   var collapsible = new nyc.Collapsible({
     target: $('<div id="group"></div>'),
     title: 'Group by',
-    content: finderApp.filters.geoGroup.getContainer()
-  })
-  finderApp.filters.geoGroup.on('change', finderApp.filters.filter, finderApp.filters);
+    content: geoGroup.getContainer()
+  });
+
+  geoGroup.on('change', finderApp.filters.filter, finderApp.filters);
   $('#filters').prepend(collapsible.getContainer());
   finderApp.tabs.open('#filters');
+
+  finderApp.map.addLayer(geoGroup.layers.council);
+  finderApp.map.addLayer(geoGroup.layers.zip);
+  finderApp.map.addLayer(geoGroup.layers.boro);
 });

@@ -1,5 +1,7 @@
 var CARTO_URL = 'https://nycomb-admin.carto.com/api/v2/sql?q=';
 
+nyc.ol.Filters.prototype.geoGroup = geoGroup;
+
 nyc.ol.Filters.prototype.projColumns = {
   zip: 'address_postal_code',
   boro: 'borough',
@@ -12,18 +14,8 @@ nyc.ol.Filters.prototype.geoColumns = {
   council: 'cd'
 };
 
-nyc.ol.Filters.prototype.geoGroup = new nyc.Choice({
-  target: $('<div></div>'),
-  radio: true,
-  choices: [
-    {name: 'group', values: ['council'], label: 'Council District', checked: true},
-    {name: 'group', values: ['zip'], label: 'Zip Code'},
-    {name: 'group', values: ['boro'], label: 'Borough'}
-  ]
-});
-
 nyc.ol.Filters.prototype.getGeo = function() {
-  return this.geoGroup.val()[0].values[0];
+  return this.geoGroup.getGroup();
 };
 
 nyc.ol.Filters.prototype.select = function(projCol) {
