@@ -39,7 +39,8 @@ $(document).ready(function() {
   $('#filters').prepend(collapsible.getContainer());
   finderApp.tabs.open('#filters');
 
-  finderApp.map.addLayer(geoGroup.layers.council);
-  finderApp.map.addLayer(geoGroup.layers.zip);
-  finderApp.map.addLayer(geoGroup.layers.boro);
+  var map = finderApp.map;
+  map.addLayer(geoGroup.layers.council);
+  map.addLayer(geoGroup.layers.zip);
+  map.addLayer(geoGroup.layers.boro);
 });
