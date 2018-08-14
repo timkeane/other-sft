@@ -8,7 +8,7 @@ var decorations = {
       zip: 'ZIP Code ',
       boro: ''
     }[geo];
-    return $('<b>' + geoType + '</b>');
+    return $('<h2>' + geoType + '</h2>');
   },
   geoName: function(geo) {
     return this.get(this.finderApp.filters.projColumns[geo]);
@@ -19,7 +19,7 @@ var decorations = {
     var count = this.get('count');
     return $('<div></div>')
       .append(type.append(this.geoName(geo)))
-      .append('<br>' + count + ' project')
+      .append(count + ' project')
       .append(count > 1 ? 's' : '')
       .append(this.getDrawdown());
   },

@@ -44,7 +44,7 @@ nyc.ol.Filters.prototype.where = function(projCol, geoCol) {
 };
 
 nyc.ol.Filters.prototype.group = function(projCol) {
-return ' group by s.' + projCol + ', g.the_geom_webmercator';
+return ' group by s.' + projCol + ', g.the_geom_webmercator order by drawdown desc';
 };
 
 nyc.ol.Filters.prototype.sql = function() {

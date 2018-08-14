@@ -22,6 +22,9 @@
 .pop>.content {
   width: 200px;
 }
+#facilities h2, .pop h2, .f-tip h2 {
+  margin: 0;
+}
 @media only screen and (max-width : 750px), screen and (max-device-height: 350px) {
   .fnd #tabs .btns h2.btn-2 {
     display: table-cell;
