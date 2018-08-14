@@ -20,7 +20,17 @@ var decorations = {
     return $('<div></div>')
       .append(type.append(this.geoName(geo)))
       .append('<br>' + count + ' project')
-      .append(count > 1 ? 's' : '');
+      .append(count > 1 ? 's' : '')
+      .append(this.getDrawdown());
+  },
+  getDrawdown: function() {
+    var drawdown = new Number(this.get('drawdown'));
+    drawdown = drawdown.toLocaleString('en-US', {
+      currency: 'USD',
+      style: 'currency'
+    });
+    return $('<div><b>Drawdown:</b> </div>')
+      .append(drawdown);
   },
   html: function() {
     return this.getName();
